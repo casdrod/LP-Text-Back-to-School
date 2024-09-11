@@ -94,7 +94,7 @@ main ul{list-style:none;padding:0;margin:10px auto;text-align:left;display:table
 }
 
 .phone{color:$primary;font:700 30px/30px $font2;display:block;letter-spacing:.5px;
-    &:hover{color:$secondary !important}
+    &:hover{color:$primary !important}
     span {display: block; color: $text; font-size: 18px;}
 }
 
@@ -150,7 +150,7 @@ header{position:relative;padding:40px 15px;z-index:100;background-color: #DFDBD8
         #banner-flex {padding: 20px 0;
             article {flex: 0 1 60%;}
             figure {flex: 0 1 40%;}
-            .big {color: #fff; font-size: 29px; line-height: normal;}
+            .big {color: #fff; font-size: 29px; line-height: normal;text-align:left;}
         }
     }
     #categ {display:flex;flex-wrap:wrap;justify-content: space-evenly;align-items:center;max-width: 1300px;margin: 50px auto;
@@ -198,7 +198,8 @@ header{position:relative;padding:40px 15px;z-index:100;background-color: #DFDBD8
     }
     .form {background-color: #f0f0f0;
         form{ max-width: 100%;  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; padding-bottom: 50px; padding-top: 50px;
-            >div{margin: 5px 20px; flex: 0 1 360px;
+            >div{margin: 5px 20px; flex: 0 1 360px;gap: 10px;
+                display: grid;
                 .flex-ed {width: 100%; justify-content: center;}
             }
         }
@@ -207,12 +208,14 @@ header{position:relative;padding:40px 15px;z-index:100;background-color: #DFDBD8
         input[type=checkbox]{height: 30px; width: 30px; display: inline-block; vertical-align: middle;}
         input[type=checkbox] + label{font-size: 15px; color: $text; margin-left: 5px;}
         .big-label{display: block; font-size: 20px; font-weight: 700; color: $text;text-align:left;}
-        .simple .btn {width: 95%;text-transform:uppercase;font-family: $font2; color:#000;}
+        .simple .btn {width: 100%;text-transform:uppercase;font-family: $font2; color:#fff;
+            &:hover {background-color: $secondary;}
+        }
         ::-webkit-input-placeholder { color: $text; }
         :-moz-placeholder { color: $text; }
         ::-moz-placeholder { color: $text; }
         :-ms-input-placeholder { color: $text; }
-        textarea {height: 130px;padding: 15px;}
+        textarea {height: 130px;padding: 15px;width: 100%;}
     }
     .use-it-very-bottom-text {margin: 80px auto 60px;
         .big {line-height: 1.2;color: #fff !important; margin: 0;font-weight: 400;font-family: $font2; font-size:40px;}
@@ -226,7 +229,7 @@ footer :is(input, textarea) {background-color: #f0f0f0 !important;}
 /* ------------- Footer -------------- */
 footer{overflow:hidden; padding:40px 0 0;background-color:#292929;
     h2{font:bold 40px/1.2 $font2; color: #fff;text-align:center;margin:0 auto 20px; position: relative; padding-top:50px;}
-    .split{justify-content:space-evenly;max-width:75vw;align-items:flex-start;margin:auto;margin-bottom:30px;display: flex;flex-wrap: wrap;
+    .split{justify-content:space-evenly;max-width:1400px;align-items:flex-start;margin:auto;margin-bottom:30px;display: flex;flex-wrap: wrap;
         figure{
             margin-top:10px;flex:0 1 445px;color:#fff; padding: 20px 0;display:flex;flex-wrap:wrap;justify-content:center;
             & > * {flex: 100%;color: #fff; font-family:$font2; font-size: 18px; font-weight: normal;}
@@ -405,7 +408,7 @@ figcaption{text-align:center; background: #000; text-transform: uppercase; paddi
 
 @media (max-width: 590px) {
     #nav {justify-content: center;}
-    #nav .logo img {max-width: 300px;margin: 0 auto;}
+    #nav .logo img {max-width: 85px;margin: 0 auto;}
     h1 span{font-size:60px;margin:10px auto}
     h1 {font-size: 38px;}
     h2{margin-top:20px;font-size:50px;}
